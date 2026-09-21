@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, type ChangeEvent } from "react"
+import { useContext, useEffect, useState } from "react"
 import { type Calculation, type Group } from "../data/Calculation"
 import { Search } from "../search"
 import { GroupContext } from "../context/GroupContext"
