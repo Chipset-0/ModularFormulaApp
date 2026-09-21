@@ -20,7 +20,7 @@ function NavbarPage () {
 function App() {
 
   return (
-    <div className='min-w-[100vw] min-h-[100vh] flex flex-col'>
+    <div className='min-w-screen min-h-screen flex flex-col'>
       <GroupProvider>
         <HistoryProvider>
           <BrowserRouter>

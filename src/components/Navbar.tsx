@@ -6,7 +6,7 @@ export default function Navbar() {
         isActive ? "text-cyan-950 underline" : "";
 
     return (
-        <nav className="min-h-[80px] flex gap-4 text-2xl items-center justify-start pl-4 border-b border-gray-900">
+        <nav className="min-h-20 flex gap-4 text-2xl items-center justify-start pl-4 border-b border-gray-900">
                 <NavLink className={linkClass} to="/">Home</NavLink>
                 <NavLink className={linkClass} to="/create">Create</NavLink>
                 <NavLink className={linkClass} to="/search">Search</NavLink>

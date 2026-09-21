@@ -5,7 +5,6 @@ dotenv.config()
 
 const STORAGE_KEY = "calculator_groups"
 
-const DATABASE_URL = process.env.DATABASE_URL
 
 export function getGroupsLocal(): Group[] {
     try {

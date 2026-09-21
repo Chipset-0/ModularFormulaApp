@@ -91,7 +91,7 @@ export function Create () {
 
                 </div>
                 <h3 className="text-2xl">Selected Formulas</h3>
-                <div className="w-full h-[200px] border border-gray-500 overflow-y-auto grid grid-cols-5">
+                <div className="w-full h-50 border border-gray-500 overflow-y-auto grid grid-cols-5">
                     {calculations.map((calculation) => (
                         <div key={calculation.id} onClick={() => removeFromSelected(calculation)}
                             className="overflow-x-hidden group h-fit gap-4 rounded p-2"
@@ -116,7 +116,7 @@ export function Create () {
                 </div>
 
                 <h3>Search Results</h3>
-                <div className="w-full h-[200px] border border-gray-500 overflow-y-auto grid grid-cols-5">
+                <div className="w-full h-50 border border-gray-500 overflow-y-auto grid grid-cols-5">
                     {searchResults.map((calculation) => (
                         <div key={calculation.id} onClick={() => addToSelected(calculation)}
                             className="overflow-x-hidden group h-fit gap-4 rounded p-2"

@@ -5,7 +5,7 @@ import {evaluate, type MathScope} from "mathjs"
 import { HistoryContext } from "../context/HistoryContext";
 
 export function CalculationElement({calculation}: {calculation: Calculation}) {
-    const {history, appendHistory} = useContext(HistoryContext)
+    const {appendHistory} = useContext(HistoryContext)
     
     const [values, setValues] = useState<MathScope>(
         Object.fromEntries(
@@ -40,14 +40,14 @@ export function CalculationElement({calculation}: {calculation: Calculation}) {
     }
 
     return (
-        <div className="align-center border border-gray-300 rounded h-[150px] grid grid-cols-[1fr_1fr_120px] grid-rows-[40px_1fr] p-2">
+        <div className="align-center border border-gray-300 rounded h-37.5 grid grid-cols-[1fr_1fr_120px] grid-rows-[40px_1fr] p-2">
             <h3 className="col-start-1 col-end-1 row-start-1 row-end-1">{calculation.title}</h3>
             <div className="col-start-1 col-end-1 row-start-2 row-end-3 grid place-items-center">
                 <BlockMath key={calculation.id} math={calculation.latex} />
             </div>
             <div className="col-start-2 col-end-4 row-start-1 row-end-3 min-h-0">
                 <form onSubmit={handleSubmit} className="flex w-full h-full gap-4">
-                    <div className="flex flex-col w-full gap-3 flex-grow">
+                    <div className="flex flex-col w-full gap-3 grow">
                         {calculation.variables.map((variable) => (
                             <div key={variable.symbol} 
                             className="w-full gap-2 grid grid-cols-[40px_1fr]">
@@ -69,7 +69,7 @@ export function CalculationElement({calculation}: {calculation: Calculation}) {
                             </div>
                         ))}
                     </div>
-                    <div className="w-[200px] h-full grid place-items-center">
+                    <div className="w-50 h-full grid place-items-center">
                         
                         <button 
                             className="border border-gray-500 rounded p-2 bg-blue-100"
