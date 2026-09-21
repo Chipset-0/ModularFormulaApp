@@ -1,7 +1,5 @@
-import dotenv from 'dotenv'
 import type { Group } from "./Calculation";
 
-dotenv.config()
 
 const STORAGE_KEY = "calculator_groups"
 
